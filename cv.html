@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Benoit ROUXEL - Style VSCode</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    html {
+      -webkit-print-color-adjust: exact;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #252526;
+    }
+
+    .container {
+      width: 210mm;
+      height: 297mm;
+      display: flex;
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: 70mm;
+      background-color: #1B1B1C;
+      color: #ffffff;
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .margin {
+      width: 14mm;
+      padding-top: 10px;
+      background-color: #1B1B1C;
+      color: #ffffff;
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      border-right: solid 1px #C5C5C5;
+    }
+
+    .margin-icon {
+      width: 100%;
+      height: 10mm;
+      position: relative;
+    }
+    .margin-icon > * {
+      width: 8mm;
+      height: 8mm;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+    }
+    .margin-icon:last-child {
+      border-left: solid 3px #007ACC;
+    }
+    .margin-icon:last-child > * {
+      left: calc(50% - 3px);
+    }
+
+    .sidebar .section {
+      margin-bottom: 20px;
+    }
+
+    .sidebar h2,
+    .sidebar h3 {
+      color: #007ACC;
+    }
+
+    .sidebar p,
+    .sidebar li {
+      font-size: 0.8em;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .sidebar li {
+      list-style-type: none;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .sidebar i {
+      color: white;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      padding: 20px;
+    }
+
+    .experience {
+      list-style: none;
+    }
+
+    .experience li:before {
+      content: '•';
+      margin-right: 5px;
+      color: #569cd6;
+    }
+
+    .data {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 5px
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="margin">
+      <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/files.svg" alt="" /></span>
+      <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/search.svg" alt="" /></span>
+      <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/source-control.svg" alt="" /></span>
+      <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/debug-alt.svg" alt="" /></span>
+      <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/extensions.svg" alt="" /></span>
+      <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/remote-explorer.svg" alt="" /></span>
+      <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/smiley.svg" alt="" /></span>
+    </div>
+    <div class="sidebar">
+      <div class="section">
+        <h2>Benoit ROUXEL</h2>
+        <div class="data">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>2, route de Kerjakez, 29800 La Forest-Landerneau</span>
+          <i class="fas fa-phone"></i>
+          <span>0650970542</span>
+          <i class="far fa-envelope"></i>
+          <span><a href="mailto:benoit.rouxel@live.fr">benoit.rouxel@live.fr</a></span>
+          <i class="fab fa-linkedin"></i>
+          <span>
+            <a href="https://www.linkedin.com/in/benoit-rouxel-a71a68119/" target="_blank">benoit-rouxel</a>
+          </span>
+        </div>
+      </div>
+      <div class="section">
+        <h3>Résumé des compétences</h3>
+        <p><strong>Techniques :</strong></p>
+        <ul>
+          <li>Langages : Javascript (4), Golang (4), Java (4), Python (3), C++ (2)</li>
+          <li>Bases de données : Opensearch, SQLite, PostgreSQL, MongoDB, Chroma</li>
+          <li>Pratiques : DevOps, Agile, TDD</li>
+          <li>Autres : IA (LLM, Speech2Text), Docker</li>
+        </ul>
+        <p><strong>Fonctionnelles :</strong></p>
+        <ul>
+          <li>À l'écoute, moteur, enthousiaste, curieux</li>
+          <li>Compétence en rédaction de use case, UX</li>
+          <li>Contribution à réponses à appels d'offre</li>
+          <li>Mise en place de formations, initiative</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h3>Cursus universitaire</h3>
+        <ul>
+          <li>Telecom Bretagne, Brest (29) | 2011 – 2014</li>
+          <li>École Nationale Supérieure d'Ingénieurs de Bretagne-Sud, Vannes (56) | 2008 – 2011</li>
+          <li>Classe préparatoire Math-Physique, Vannes (56) | 2006 – 2008</li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-content">
+      <!-- La section principale du CV, comme l'expérience professionnelle, peut être ajoutée ici -->
+      <h2>Expérience Professionnelle</h2>
+      <ul class="experience">
+        <!-- Les détails de l'expérience professionnelle de Benoit ROUXEL peuvent être ajoutés ici -->
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
