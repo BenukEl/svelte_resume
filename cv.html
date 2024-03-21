@@ -109,7 +109,7 @@
 
     .main-content {
       flex-grow: 1;
-      padding: 20px 20px 20px 0 ;
+      padding: 20px 20px 20px 0;
       color: #C5C5C5;
       text-align: justify;
     }
@@ -271,11 +271,17 @@
       font-size: smaller;
     }
 
-    .job li, .skill > span {
+    .job li,
+    .skill>span {
       font-size: 0.9em;
     }
 
+    .job ul {
+      margin-block: 10px;
+    }
+
     .tech {
+      font-size: .9em;
       display: flex;
       flex-direction: row;
       gap: 5px;
@@ -313,6 +319,10 @@
           <span>
             <a href="https://www.linkedin.com/in/benoit-rouxel-a71a68119/" target="_blank">benoit-rouxel</a>
           </span>
+            <img src="icons/vscode-icons-main/icons/dark/pass.svg" alt="" />
+            <span>Permis B</span>
+            <img src="icons/vscode-icons-main/icons/dark/pass.svg" alt="" />
+            <span>TOEIC: 870</span>
         </div>
       </div>
       <div class="section">
@@ -406,6 +416,7 @@
         </div>
       </div>
     </div>
+
     <div class="main-content">
       <!-- La section principale du CV, comme l'expérience professionnelle, peut être ajoutée ici -->
       <h1>Lead Tech</h1>
@@ -427,15 +438,12 @@
             </div>
           </div>
           <ul>
-            <li>Développement de POCs : Conception et réalisation de prototypes, incluant une visualisation 3D et
-              l'exploitation de données sur une plateforme Big Data.</li>
-            <li>Application Web : Responsable de l'architecture globale et de l'intégration continue/de la livraison
-              continue (CI/CD), assurant la qualité du code, la sécurité et le déploiement efficace.</li>
-            <li>Leadership Technique : Création et animation d'un groupe d'échange entre développeurs pour partager
-              les
-              connaissances sur les nouvelles technologies, renforçant ainsi l'esprit d'innovation et la
-              collaboration au
-              sein de l'équipe.</li>
+            <li><b>Développement de POCs :</b> Conception et réalisation de prototypes, incluant une visualisation 3D, 
+              l'exploitation de données sur une plateforme Big Data et de l'IA générative.</li>
+            <li><b>Application Web :</b> Responsable de l'architecture, de l'intégration continue (CI/CD), la qualité
+              du code, la sécurité et la scalabilité. Création des user story et discussion avec les utilisateurs.</li>
+            <li><b>Leadership Technique :</b> Création et animation d'un groupe d'échange entre développeurs pour partager
+              les connaissances sur les nouvelles technologies.</li>
           </ul>
           <div class="tech">
             <img src="icons/vscode-icons-main/icons/light/lightbulb.svg" alt="" />
@@ -458,14 +466,10 @@
             </div>
           </div>
           <ul>
-            <li>Développement Full Stack : Développement d'applications full stack utilisant React et Spring,
-              améliorant
-              l'interface utilisateur et l'expérience client.</li>
-            <li>Innovation et automatisation : Conception d'un addon navigateur pour intégrer les résultats de
-              SonarQube
-              dans GitLab et réalisation d'un script pour automatiser la configuration des postes de travail des
-              nouveaux
-              arrivants, optimisant les processus de développement.</li>
+            <li><b>Développement Full Stack :</b> Développement d'applications full stack utilisant React et Spring.</li>
+            <li><b>Innovation et automatisation :</b> Conception d'un addon navigateur pour intégrer les résultats de
+              SonarQube dans les MR GitLab et réalisation d'un script pour automatiser la configuration des postes de travail des
+              nouveaux arrivants, optimisant les processus de développement.</li>
           </ul>
           <div class="tech">
             <img src="icons/vscode-icons-main/icons/light/lightbulb.svg" alt="" />
@@ -488,12 +492,10 @@
             </div>
           </div>
           <ul>
-            <li>Solutions Géomatiques Innovantes : Direction de projets de développement de solutions géomatiques,
-              de la
-              définition des besoins clients à la mise en production, en passant par la conception UX et
-              l'architecture de
-              solutions.</li>
-            <li>Gestion d'équipe et mentorat : Attribution des tâches et mentorat des membres de l'équipe de
+            <li><b>Plateforme web de Géomatiques marine :</b> Lead de l'équipe de développement de la solutions,
+              de la définition des besoins clients à la mise en production, en passant par la conception UX et
+              l'architecture de solutions.</li>
+            <li><b>Gestion d'équipe et mentorat :</b> Attribution des tâches et mentorat des membres de l'équipe de
               développement, favorisant le développement professionnel et la réussite du projet.</li>
           </ul>
           <div class="tech">
@@ -517,15 +519,11 @@
             </div>
           </div>
           <ul>
-            <li>R&D et innovation : Contribution à la recherche et au développement dans le service R&D d'Arkéa,
-              avec un
-              focus sur la reconnaissance du locuteur et le développement de plugins et services améliorant
-              l'interaction
-              utilisateur et la sécurité.</li>
-            <li>Développement Full Stack et IA : Développement d'une plateforme de démonstration full stack et d'un
+            <li><b>R&D et innovation :</b> Contribution à la recherche et au développement dans le service R&D d'Arkéa,
+              avec un focus sur la biométrie comportementale, la reconnaissance du locuteur et le développement d'extentions web.</li>
+            <li><b>Développement Full Stack et IA :</b> Développement d'une plateforme de démonstration full stack et d'un
               service de consultation de comptes via Google Home, utilisant des technologies d'intelligence
-              artificielle
-              pour la reconnaissance vocale.</li>
+              artificielle pour la reconnaissance vocale.</li>
           </ul>
           <div class="tech">
             <img src="icons/vscode-icons-main/icons/light/lightbulb.svg" alt="" />
@@ -543,7 +541,7 @@
             <div class="job-title">
               <span class="job-position">CTO / Développeur</span>
               <span class="job-date">Févr. 2016 - Juin 2016</span>
-              <span class="job-location">Saint-Gouëno, Bretagne</span>
+              <span class="job-location">Saint-Gouëno</span>
             </div>
           </div>
         </div>
@@ -558,7 +556,7 @@
             <div class="job-title">
               <span class="job-position">Développeur</span>
               <span class="job-date">Oct. 2015 - Févr. 2016</span>
-              <span class="job-location">Rennes, Bretagne</span>
+              <span class="job-location">Rennes</span>
             </div>
           </div>
         </div>
@@ -573,7 +571,7 @@
             <div class="job-title">
               <span class="job-position">Thésard</span>
               <span class="job-date">Oct. 2011 - Oct. 2014</span>
-              <span class="job-location">Plouzané, Bretagne</span>
+              <span class="job-location">Plouzané</span>
             </div>
           </div>
         </div>
@@ -588,7 +586,7 @@
             <div class="job-title">
               <span class="job-position">stagiaire</span>
               <span class="job-date">Févr. 2011 - Juil. 2011</span>
-              <span class="job-location">Vannes, Bretagne</span>
+              <span class="job-location">Vannes</span>
             </div>
           </div>
         </div> -->
