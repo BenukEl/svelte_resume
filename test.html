@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            color: white;
+            background-color: #252526;
+        }
+
+        .timeline {
+            list-style: none;
+            padding-left: 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 14px;
+            /* Ajustement pour aligner avec le point central */
+            width: 4px;
+            background: #569cd6;
+            /* Couleur de la ligne bleue */
+        }
+
+        .timeline .job {
+            margin-bottom: 20px;
+            /* Ajustez selon l'espace nécessaire entre les points */
+            padding-left: 40px;
+            /* Espace pour la ligne et le point */
+            position: relative;
+        }
+
+        .timeline .job::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            /* Ajustement pour que la bordure externe soit alignée avec la ligne */
+            top: 10px;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2px solid #1B1B1C;
+            /* Couleur du cercle bleu */
+            z-index: 3;
+            /* Pour s'assurer que le cercle soit au-dessus de la ligne */
+        }
+
+        .timeline .job::after {
+            content: '';
+            position: absolute;
+            left: 10px;
+            /* Ajustement pour aligner le point central avec la ligne */
+            top: 10px;
+            transform: translateY(-50%);
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background-color: #569cd6;
+            /* Couleur du point central */
+            z-index: 2;
+            /* Pour s'assurer que le point central soit au-dessus du cercle */
+        }
+
+        .exp-title {
+            height: 26px;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .tag {
+            display: flex;
+            gap: 3px;
+            align-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: #569cd6;
+            padding: 1px 1px 1px 5px;
+        }
+
+        .tag > :first-child {
+            height: 18px;
+        }
+
+        .tag .name {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding: 0 3px;
+            min-height: 24px;
+            background-color: #252526;
+            font-weight: bold;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .job-title {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .job-position {
+            font-weight: bold;
+        }
+
+        .job-date {
+            font-style: italic;
+        }
+
+        .job-location {
+            font-size: smaller;
+        }
+
+        .tech {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="timeline">
+
+        <div class="job">
+            <div class="exp-title">
+                <div class="tag">
+                    <img src="icons/vscode-icons-main/icons/light/source-control.svg" alt="" />
+                    <div class="name">
+                        <span>thales</span>
+                    </div>
+                </div>
+                <div class="job-title">
+                    <span class="job-position">Développeur logiciels</span>
+                    <span class="job-date">Janv. 2023 - Aujourd'hui</span>
+                    <span class="job-location">Brest, Bretagne</span>
+                </div>
+            </div>
+            <ul>
+                <li>Développement de POCs : Conception et réalisation de prototypes, incluant une visualisation 3D et
+                    l'exploitation de données sur une plateforme Big Data.</li>
+                <li>Application Web : Responsable de l'architecture globale et de l'intégration continue/de la livraison
+                    continue (CI/CD), assurant la qualité du code, la sécurité et le déploiement efficace.</li>
+                <li>Leadership Technique : Création et animation d'un groupe d'échange entre développeurs pour partager
+                    les
+                    connaissances sur les nouvelles technologies, renforçant ainsi l'esprit d'innovation et la
+                    collaboration au
+                    sein de l'équipe.</li>
+            </ul>
+            <div class="tech">
+                <img src="icons/vscode-icons-main/icons/light/lightbulb.svg" alt="" />
+                <span>devops, architecture, user story, golang, LLM, react, opensearch</span>
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="exp-title">
+                <div class="tag">
+                    <img src="icons/vscode-icons-main/icons/light/source-control.svg" alt="" />
+                    <div class="name">
+                        <span>fortuneo</span>
+                    </div>
+                </div>
+                <div class="job-title">
+                    <span class="job-position">Développeur</span>
+                    <span class="job-date">Sept. 2022 - Janv. 2023</span>
+                    <span class="job-location">Brest, Bretagne</span>
+                </div>
+            </div>
+            <ul>
+                <li>Développement Full Stack : Développement d'applications full stack utilisant React et Spring,
+                    améliorant
+                    l'interface utilisateur et l'expérience client.</li>
+                <li>Innovation et automatisation : Conception d'un addon navigateur pour intégrer les résultats de
+                    SonarQube
+                    dans GitLab et réalisation d'un script pour automatiser la configuration des postes de travail des
+                    nouveaux
+                    arrivants, optimisant les processus de développement.</li>
+            </ul>
+            <div class="tech">
+                <img src="icons/vscode-icons-main/icons/light/lightbulb.svg" alt="" />
+                <span>react, spring boot, web extension, mongodb</span>
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="exp-title">
+                <div class="tag">
+                    <img src="icons/vscode-icons-main/icons/light/source-control.svg" alt="" />
+                    <div class="name">
+                        <span>geomod</span>
+                    </div>
+                </div>
+                <div class="job-title">
+                    <span class="job-position">Lead tech</span>
+                    <span class="job-date">Janv. 2018 - Avr. 2022</span>
+                    <span class="job-location">Brest, Bretagne</span>
+                </div>
+            </div>
+            <ul>
+                <li>Solutions Géomatiques Innovantes : Direction de projets de développement de solutions géomatiques,
+                    de la
+                    définition des besoins clients à la mise en production, en passant par la conception UX et
+                    l'architecture de
+                    solutions.</li>
+                <li>Gestion d'équipe et mentorat : Attribution des tâches et mentorat des membres de l'équipe de
+                    développement, favorisant le développement professionnel et la réussite du projet.</li>
+            </ul>
+            <div class="tech">
+                <img src="icons/vscode-icons-main/icons/light/lightbulb.svg" alt="" />
+                <span>User story, Maquette UX, architecture, build, Javascript, Java, nodejs, SQLite, Géomatique</span>
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="exp-title">
+                <div class="tag">
+                    <img src="icons/vscode-icons-main/icons/light/source-control.svg" alt="" />
+                    <div class="name">
+                        <span>silicom</span>
+                    </div>
+                </div>
+                <div class="job-title">
+                    <span class="job-position">Développeur R&D</span>
+                    <span class="job-date">Sept. 2016 - Janv. 2018</span>
+                    <span class="job-location">Brest, Bretagne</span>
+                </div>
+            </div>
+            <ul>
+                <li>R&D et innovation : Contribution à la recherche et au développement dans le service R&D d'Arkéa,
+                    avec un
+                    focus sur la reconnaissance du locuteur et le développement de plugins et services améliorant
+                    l'interaction
+                    utilisateur et la sécurité.</li>
+                <li>Développement Full Stack et IA : Développement d'une plateforme de démonstration full stack et d'un
+                    service de consultation de comptes via Google Home, utilisant des technologies d'intelligence
+                    artificielle
+                    pour la reconnaissance vocale.</li>
+            </ul>
+            <div class="tech">
+                <img src="icons/vscode-icons-main/icons/light/lightbulb.svg" alt="" />
+                <span>angularjs, spring, nodejs, mongodb, biométrie comportementale, web extension, </span>
+            </div>
+        </div>
+        <div class="job">
+            <div class="exp-title">
+                <div class="tag">
+                    <img src="icons/vscode-icons-main/icons/light/tag.svg" alt="" />
+                    <div class="name">
+                        <span>agriwatcher</span>
+                    </div>
+                </div>
+                <div class="job-title">
+                    <span class="job-position">CTO / Développeur</span>
+                    <span class="job-date">Févr. 2016 - Juin 2016</span>
+                    <span class="job-location">Saint-Gouëno, Bretagne</span>
+                </div>
+            </div>
+        </div>
+        <div class="job">
+            <div class="exp-title">
+                <div class="tag">
+                    <img src="icons/vscode-icons-main/icons/light/tag.svg" alt="" />
+                    <div class="name">
+                        <span>sopra steria</span>
+                    </div>
+                </div>
+                <div class="job-title">
+                    <span class="job-position">Développeur</span>
+                    <span class="job-date">Oct. 2015 - Févr. 2016</span>
+                    <span class="job-location">Rennes, Bretagne</span>
+                </div>
+            </div>
+        </div>
+        <div class="job">
+            <div class="exp-title">
+                <div class="tag">
+                    <img src="icons/vscode-icons-main/icons/light/tag.svg" alt="" />
+                    <div class="name">
+                        <span>télécom bretagne</span>
+                    </div>
+                </div>
+                <div class="job-title">
+                    <span class="job-position">Thésard</span>
+                    <span class="job-date">Oct. 2011 - Oct. 2014</span>
+                    <span class="job-location">Plouzané, Bretagne</span>
+                </div>
+            </div>
+        </div>
+        <div class="job">
+            <div class="exp-title">
+                <div class="tag">
+                    <img src="icons/vscode-icons-main/icons/light/tag.svg" alt="" />
+                    <div class="name">
+                        <span>agriwatcher</span>
+                    </div>
+                </div>
+                <div class="job-title">
+                    <span class="job-position">stagiaire</span>
+                    <span class="job-date">Févr. 2011 - Juil. 2011</span>
+                    <span class="job-location">Vannes, Bretagne</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
