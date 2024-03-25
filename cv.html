@@ -28,6 +28,54 @@
       height: 297mm;
       display: flex;
       overflow: hidden;
+      flex-direction: column;
+    }
+
+    .window-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #2C2C2C;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+      position: relative;
+      font-size: 16px;
+    }
+
+    .window-controls {
+      margin: 0 5px;
+      position: absolute;
+      right: 0;
+    }
+
+    .window-controls button {
+      background-color: #555;
+      border: none;
+      color: white;
+      width: 25px;
+      height: 25px;
+      font-weight: bold;
+      margin-left: 5px;
+      border-radius: 100%;      
+    }
+
+    .minimize,
+    .maximize {
+      display: inline-block;
+      width: 20px;
+      text-align: center;
+    }
+
+    .close {
+      display: inline-block;
+      width: 20px;
+      text-align: center;
+    }
+
+    .content {
+      display: flex;
+      overflow: hidden;
     }
 
     .sidebar {
@@ -292,291 +340,307 @@
 
 <body>
   <div class="container">
-    <div class="margin">
-      <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/files.svg" alt="" /></span>
-      <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/search.svg" alt="" /></span>
-      <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/source-control.svg" alt="" /></span>
-      <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/debug-alt.svg" alt="" /></span>
-      <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/extensions.svg" alt="" /></span>
-      <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/remote-explorer.svg" alt="" /></span>
-      <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/smiley.svg" alt="" /></span>
+    <div class="window-bar">
+      <div class="title">Benoit ROUXEL - Tech Lead</div>
+      <div class="window-controls">
+        <button class="minimize">─</button>
+        <button class="maximize">□</button>
+        <button class="close">X</button>
+      </div>
     </div>
-    <div class="sidebar">
-      <h2>Benoit ROUXEL</h2>
-      <div class="section">
-        <div class="section-title">
-          <img src="icons/vscode-icons-main/icons/dark/chevron-down.svg" alt="" />
-          <span>Informations</span>
-        </div>
+    <div class="content">
+      <div class="margin">
+        <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/files.svg" alt="" /></span>
+        <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/search.svg" alt="" /></span>
+        <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/source-control.svg" alt="" /></span>
+        <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/debug-alt.svg" alt="" /></span>
+        <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/extensions.svg" alt="" /></span>
+        <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/remote-explorer.svg" alt="" /></span>
+        <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/smiley.svg" alt="" /></span>
+      </div>
+      <div class="sidebar">
+        <h2>Benoit ROUXEL</h2>
+        <div class="section">
+          <div class="section-title">
+            <img src="icons/vscode-icons-main/icons/dark/chevron-down.svg" alt="" />
+            <span>Informations</span>
+          </div>
 
-        <div class="section-content info">
-          <i class="fas fa-map-marker-alt"></i>
-          <span>2, route de Kerjakez, 29800 La Forest-Landerneau</span>
-          <i class="fas fa-phone"></i>
-          <span>0650970542</span>
-          <i class="far fa-envelope"></i>
-          <span><a href="mailto:benoit.rouxel@live.fr">benoit.rouxel@live.fr</a></span>
-          <i class="fab fa-linkedin"></i>
-          <span>
-            <a href="https://www.linkedin.com/in/benoit-rouxel-a71a68119/" target="_blank">benoit-rouxel</a>
-          </span>
+          <div class="section-content info">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>2, route de Kerjakez, 29800 La Forest-Landerneau</span>
+            <i class="fas fa-phone"></i>
+            <span>0650970542</span>
+            <i class="far fa-envelope"></i>
+            <span><a href="mailto:benoit.rouxel@live.fr">benoit.rouxel@live.fr</a></span>
+            <i class="fab fa-linkedin"></i>
+            <span>
+              <a href="https://www.linkedin.com/in/benoit-rouxel-a71a68119/" target="_blank">benoit-rouxel</a>
+            </span>
             <img src="icons/vscode-icons-main/icons/dark/pass.svg" alt="" />
             <span>Permis B</span>
             <img src="icons/vscode-icons-main/icons/dark/pass.svg" alt="" />
             <span>TOEIC: 870</span>
+          </div>
         </div>
-      </div>
-      <div class="section">
-        <div class="section-title">
-          <img src="icons/vscode-icons-main/icons/dark/chevron-down.svg" alt="" />
-          <span>Compétences</span>
-        </div>
-        <div class="section-content">
-          <div>
+        <div class="section">
+          <div class="section-title">
             <img src="icons/vscode-icons-main/icons/dark/chevron-down.svg" alt="" />
-            <span>Techniques</span>
+            <span>Compétences</span>
           </div>
           <div class="section-content">
-            <span class="skill">
-              <img src="icons/vscode-icons-main/icons/dark/symbol-namespace.svg" alt="" />
-              <span>Javascript, Golang, Java, Python, C++</span>
-            </span>
-            <span class="skill">
-              <img src="icons/vscode-icons-main/icons/dark/database.svg" alt="" />
-              <span>Opensearch, SQlite, PostgreSQL, MongoDB, Chroma</span>
-            </span>
-            <span class="skill">
-              <img src="icons/vscode-icons-main/icons/dark/gear.svg" alt="" />
-              <span>DevOps, Agile, TDD</span>
-            </span>
-            <span class="skill">
-              <img src="icons/vscode-icons-main/icons/dark/hubot.svg" alt="" />
-              <span>IA (LLM, Speech2Text), Docker</span>
-            </span>
+            <div>
+              <img src="icons/vscode-icons-main/icons/dark/chevron-down.svg" alt="" />
+              <span>Techniques</span>
+            </div>
+            <div class="section-content">
+              <span class="skill">
+                <img src="icons/vscode-icons-main/icons/dark/symbol-namespace.svg" alt="" />
+                <span>Javascript, Golang, Java, Python, C++</span>
+              </span>
+              <span class="skill">
+                <img src="icons/vscode-icons-main/icons/dark/database.svg" alt="" />
+                <span>Opensearch, SQlite, PostgreSQL, MongoDB, Chroma</span>
+              </span>
+              <span class="skill">
+                <img src="icons/vscode-icons-main/icons/dark/gear.svg" alt="" />
+                <span>DevOps, Agile, TDD</span>
+              </span>
+              <span class="skill">
+                <img src="icons/vscode-icons-main/icons/dark/hubot.svg" alt="" />
+                <span>IA (LLM, Speech2Text), Docker</span>
+              </span>
+            </div>
+            <div>
+              <img src="icons/vscode-icons-main/icons/dark/chevron-down.svg" alt="" />
+              <span>Fonctionnelles</span>
+            </div>
+            <div class="section-content">
+              <span class="skill">
+                <img src="icons/vscode-icons-main/icons/dark/symbol-class.svg" alt="" />
+                <span>À l'écoute, moteur, enthousiaste, curieux, initiative</span>
+              </span>
+              <span class="skill">
+                <img src="icons/vscode-icons-main/icons/dark/vm-active.svg" alt="" />
+                <span>Rédaction de use case, UX</span>
+              </span>
+              <span class="skill">
+                <img src="icons/vscode-icons-main/icons/dark/edit.svg" alt="" />
+                <span>Contribution à réponses à appels d'offre</span>
+              </span>
+              <span class="skill">
+                <img src="icons/vscode-icons-main/icons/dark/mortar-board.svg" alt="" />
+                <span>Mise en place de formations</span>
+              </span>
+            </div>
           </div>
-          <div>
+        </div>
+        <div class="section">
+          <div class="section-title">
             <img src="icons/vscode-icons-main/icons/dark/chevron-down.svg" alt="" />
-            <span>Fonctionnelles</span>
+            <span>Cursus</span>
           </div>
           <div class="section-content">
             <span class="skill">
-              <img src="icons/vscode-icons-main/icons/dark/symbol-class.svg" alt="" />
-              <span>À l'écoute, moteur, enthousiaste, curieux, initiative</span>
+              <img src="icons/vscode-icons-main/icons/dark/pass.svg" alt="" />
+              <span>Telecom Bretagne</span>
             </span>
+            <div class="section-content">
+              <span class="skill">
+                <img src="icons/vscode-icons-main/icons/dark/chevron-right.svg" alt="" />
+                <span>2011 – 2014</span>
+              </span>
+            </div>
             <span class="skill">
-              <img src="icons/vscode-icons-main/icons/dark/vm-active.svg" alt="" />
-              <span>Rédaction de use case, UX</span>
+              <img src="icons/vscode-icons-main/icons/dark/pass.svg" alt="" />
+              <span>École Nationale Supérieure d'Ingénieurs de Bretagne-Sud</span>
             </span>
+            <div class="section-content">
+              <span class="skill">
+                <img src="icons/vscode-icons-main/icons/dark/chevron-right.svg" alt="" />
+                <span>2008 – 2011</span>
+              </span>
+            </div>
             <span class="skill">
-              <img src="icons/vscode-icons-main/icons/dark/edit.svg" alt="" />
-              <span>Contribution à réponses à appels d'offre</span>
+              <img src="icons/vscode-icons-main/icons/dark/pass.svg" alt="" />
+              <span>Classe préparatoire Math-Physique</span>
             </span>
-            <span class="skill">
-              <img src="icons/vscode-icons-main/icons/dark/mortar-board.svg" alt="" />
-              <span>Mise en place de formations</span>
-            </span>
+            <div class="section-content">
+              <span class="skill">
+                <img src="icons/vscode-icons-main/icons/dark/chevron-right.svg" alt="" />
+                <span>2006 – 2008</span>
+              </span>
+            </div>
           </div>
         </div>
       </div>
-      <div class="section">
-        <div class="section-title">
-          <img src="icons/vscode-icons-main/icons/dark/chevron-down.svg" alt="" />
-          <span>Cursus</span>
-        </div>
-        <div class="section-content">
-          <span class="skill">
-            <img src="icons/vscode-icons-main/icons/dark/pass.svg" alt="" />
-            <span>Telecom Bretagne</span>
-          </span>
-          <div class="section-content">
-            <span class="skill">
-              <img src="icons/vscode-icons-main/icons/dark/chevron-right.svg" alt="" />
-              <span>2011 – 2014</span>
-            </span>
-          </div>
-          <span class="skill">
-            <img src="icons/vscode-icons-main/icons/dark/pass.svg" alt="" />
-            <span>École Nationale Supérieure d'Ingénieurs de Bretagne-Sud</span>
-          </span>
-          <div class="section-content">
-            <span class="skill">
-              <img src="icons/vscode-icons-main/icons/dark/chevron-right.svg" alt="" />
-              <span>2008 – 2011</span>
-            </span>
-          </div>
-          <span class="skill">
-            <img src="icons/vscode-icons-main/icons/dark/pass.svg" alt="" />
-            <span>Classe préparatoire Math-Physique</span>
-          </span>
-          <div class="section-content">
-            <span class="skill">
-              <img src="icons/vscode-icons-main/icons/dark/chevron-right.svg" alt="" />
-              <span>2006 – 2008</span>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="main-content">
-      <!-- La section principale du CV, comme l'expérience professionnelle, peut être ajoutée ici -->
-      <h1>Tech Lead</h1>
+      <div class="main-content">
+        <!-- La section principale du CV, comme l'expérience professionnelle, peut être ajoutée ici -->
+        <h1>Tech Lead</h1>
 
-      <div class="timeline">
+        <div class="timeline">
 
-        <div class="job">
-          <div class="exp-title">
-            <div class="tag">
-              <img src="icons/vscode-icons-main/icons/light/source-control.svg" alt="" />
-              <div class="name">
-                <span>thales</span>
+          <div class="job">
+            <div class="exp-title">
+              <div class="tag">
+                <img src="icons/vscode-icons-main/icons/light/source-control.svg" alt="" />
+                <div class="name">
+                  <span>thales</span>
+                </div>
+              </div>
+              <div class="job-title">
+                <span class="job-position">Développeur</span>
+                <span class="job-date">Janv. 2023 - Aujourd'hui</span>
+                <span class="job-location">Brest</span>
               </div>
             </div>
-            <div class="job-title">
-              <span class="job-position">Développeur</span>
-              <span class="job-date">Janv. 2023 - Aujourd'hui</span>
-              <span class="job-location">Brest</span>
+            <ul>
+              <li><b>Développement de POCs :</b> Conception et réalisation de prototypes, incluant une visualisation 3D,
+                l'exploitation de données sur une plateforme Big Data et de l'IA générative.</li>
+              <li><b>Application Web :</b> Responsable de l'architecture, de l'intégration continue (CI/CD), la qualité
+                du code, la sécurité et la scalabilité. Création des user story et discussion avec les utilisateurs.
+              </li>
+              <li><b>Leadership Technique :</b> Création et animation d'un groupe d'échange entre développeurs pour
+                partager
+                les connaissances sur les nouvelles technologies.</li>
+            </ul>
+            <div class="tech">
+              <img src="icons/vscode-icons-main/icons/light/lightbulb.svg" alt="" />
+              <span>devops, architecture, user story, golang, LLM, react, opensearch</span>
             </div>
           </div>
-          <ul>
-            <li><b>Développement de POCs :</b> Conception et réalisation de prototypes, incluant une visualisation 3D, 
-              l'exploitation de données sur une plateforme Big Data et de l'IA générative.</li>
-            <li><b>Application Web :</b> Responsable de l'architecture, de l'intégration continue (CI/CD), la qualité
-              du code, la sécurité et la scalabilité. Création des user story et discussion avec les utilisateurs.</li>
-            <li><b>Leadership Technique :</b> Création et animation d'un groupe d'échange entre développeurs pour partager
-              les connaissances sur les nouvelles technologies.</li>
-          </ul>
-          <div class="tech">
-            <img src="icons/vscode-icons-main/icons/light/lightbulb.svg" alt="" />
-            <span>devops, architecture, user story, golang, LLM, react, opensearch</span>
-          </div>
-        </div>
 
-        <div class="job">
-          <div class="exp-title">
-            <div class="tag">
-              <img src="icons/vscode-icons-main/icons/light/source-control.svg" alt="" />
-              <div class="name">
-                <span>fortuneo</span>
+          <div class="job">
+            <div class="exp-title">
+              <div class="tag">
+                <img src="icons/vscode-icons-main/icons/light/source-control.svg" alt="" />
+                <div class="name">
+                  <span>fortuneo</span>
+                </div>
+              </div>
+              <div class="job-title">
+                <span class="job-position">Développeur</span>
+                <span class="job-date">Sept. 2022 - Janv. 2023</span>
+                <span class="job-location">Brest</span>
               </div>
             </div>
-            <div class="job-title">
-              <span class="job-position">Développeur</span>
-              <span class="job-date">Sept. 2022 - Janv. 2023</span>
-              <span class="job-location">Brest</span>
+            <ul>
+              <li><b>Développement Full Stack :</b> Développement d'applications full stack utilisant React et Spring.
+              </li>
+              <li><b>Innovation et automatisation :</b> Conception d'un addon navigateur pour intégrer les résultats de
+                SonarQube dans les MR GitLab et réalisation d'un script pour automatiser la configuration des postes de
+                travail des
+                nouveaux arrivants, optimisant les processus de développement.</li>
+            </ul>
+            <div class="tech">
+              <img src="icons/vscode-icons-main/icons/light/lightbulb.svg" alt="" />
+              <span>react, spring boot, web extension, mongodb</span>
             </div>
           </div>
-          <ul>
-            <li><b>Développement Full Stack :</b> Développement d'applications full stack utilisant React et Spring.</li>
-            <li><b>Innovation et automatisation :</b> Conception d'un addon navigateur pour intégrer les résultats de
-              SonarQube dans les MR GitLab et réalisation d'un script pour automatiser la configuration des postes de travail des
-              nouveaux arrivants, optimisant les processus de développement.</li>
-          </ul>
-          <div class="tech">
-            <img src="icons/vscode-icons-main/icons/light/lightbulb.svg" alt="" />
-            <span>react, spring boot, web extension, mongodb</span>
-          </div>
-        </div>
 
-        <div class="job">
-          <div class="exp-title">
-            <div class="tag">
-              <img src="icons/vscode-icons-main/icons/light/source-control.svg" alt="" />
-              <div class="name">
-                <span>geomod</span>
+          <div class="job">
+            <div class="exp-title">
+              <div class="tag">
+                <img src="icons/vscode-icons-main/icons/light/source-control.svg" alt="" />
+                <div class="name">
+                  <span>geomod</span>
+                </div>
+              </div>
+              <div class="job-title">
+                <span class="job-position">Lead tech</span>
+                <span class="job-date">Janv. 2018 - Avr. 2022</span>
+                <span class="job-location">Brest</span>
               </div>
             </div>
-            <div class="job-title">
-              <span class="job-position">Lead tech</span>
-              <span class="job-date">Janv. 2018 - Avr. 2022</span>
-              <span class="job-location">Brest</span>
+            <ul>
+              <li><b>Plateforme web de Géomatiques marine :</b> Lead de l'équipe de développement de la solutions,
+                de la définition des besoins clients à la mise en production, en passant par la conception UX et
+                l'architecture de solutions.</li>
+              <li><b>Gestion d'équipe et mentorat :</b> Attribution des tâches et mentorat des membres de l'équipe de
+                développement, favorisant le développement professionnel et la réussite du projet.</li>
+            </ul>
+            <div class="tech">
+              <img src="icons/vscode-icons-main/icons/light/lightbulb.svg" alt="" />
+              <span>User story, Maquette UX, architecture, build, Javascript, Java, nodejs, SQLite, Géomatique</span>
             </div>
           </div>
-          <ul>
-            <li><b>Plateforme web de Géomatiques marine :</b> Lead de l'équipe de développement de la solutions,
-              de la définition des besoins clients à la mise en production, en passant par la conception UX et
-              l'architecture de solutions.</li>
-            <li><b>Gestion d'équipe et mentorat :</b> Attribution des tâches et mentorat des membres de l'équipe de
-              développement, favorisant le développement professionnel et la réussite du projet.</li>
-          </ul>
-          <div class="tech">
-            <img src="icons/vscode-icons-main/icons/light/lightbulb.svg" alt="" />
-            <span>User story, Maquette UX, architecture, build, Javascript, Java, nodejs, SQLite, Géomatique</span>
-          </div>
-        </div>
 
-        <div class="job">
-          <div class="exp-title">
-            <div class="tag">
-              <img src="icons/vscode-icons-main/icons/light/source-control.svg" alt="" />
-              <div class="name">
-                <span>silicom</span>
+          <div class="job">
+            <div class="exp-title">
+              <div class="tag">
+                <img src="icons/vscode-icons-main/icons/light/source-control.svg" alt="" />
+                <div class="name">
+                  <span>silicom</span>
+                </div>
+              </div>
+              <div class="job-title">
+                <span class="job-position">Développeur R&D</span>
+                <span class="job-date">Sept. 2016 - Janv. 2018</span>
+                <span class="job-location">Brest</span>
               </div>
             </div>
-            <div class="job-title">
-              <span class="job-position">Développeur R&D</span>
-              <span class="job-date">Sept. 2016 - Janv. 2018</span>
-              <span class="job-location">Brest</span>
+            <ul>
+              <li><b>R&D et innovation :</b> Contribution à la recherche et au développement dans le service R&D
+                d'Arkéa,
+                avec un focus sur la biométrie comportementale, la reconnaissance du locuteur et le développement
+                d'extentions web.</li>
+              <li><b>Développement Full Stack et IA :</b> Développement d'une plateforme de démonstration full stack et
+                d'un
+                service de consultation de comptes via Google Home, utilisant des technologies d'intelligence
+                artificielle pour la reconnaissance vocale.</li>
+            </ul>
+            <div class="tech">
+              <img src="icons/vscode-icons-main/icons/light/lightbulb.svg" alt="" />
+              <span>angularjs, spring, nodejs, mongodb, biométrie comportementale, web extension, </span>
             </div>
           </div>
-          <ul>
-            <li><b>R&D et innovation :</b> Contribution à la recherche et au développement dans le service R&D d'Arkéa,
-              avec un focus sur la biométrie comportementale, la reconnaissance du locuteur et le développement d'extentions web.</li>
-            <li><b>Développement Full Stack et IA :</b> Développement d'une plateforme de démonstration full stack et d'un
-              service de consultation de comptes via Google Home, utilisant des technologies d'intelligence
-              artificielle pour la reconnaissance vocale.</li>
-          </ul>
-          <div class="tech">
-            <img src="icons/vscode-icons-main/icons/light/lightbulb.svg" alt="" />
-            <span>angularjs, spring, nodejs, mongodb, biométrie comportementale, web extension, </span>
-          </div>
-        </div>
-        <div class="job">
-          <div class="exp-title">
-            <div class="tag">
-              <img src="icons/vscode-icons-main/icons/light/tag.svg" alt="" />
-              <div class="name">
-                <span>agriwatcher</span>
+          <div class="job">
+            <div class="exp-title">
+              <div class="tag">
+                <img src="icons/vscode-icons-main/icons/light/tag.svg" alt="" />
+                <div class="name">
+                  <span>agriwatcher</span>
+                </div>
+              </div>
+              <div class="job-title">
+                <span class="job-position">CTO</span>
+                <span class="job-date">Févr. 2016 - Juin 2016</span>
+                <span class="job-location">Saint-Gouëno</span>
               </div>
             </div>
-            <div class="job-title">
-              <span class="job-position">CTO</span>
-              <span class="job-date">Févr. 2016 - Juin 2016</span>
-              <span class="job-location">Saint-Gouëno</span>
-            </div>
           </div>
-        </div>
-        <div class="job">
-          <div class="exp-title">
-            <div class="tag">
-              <img src="icons/vscode-icons-main/icons/light/tag.svg" alt="" />
-              <div class="name">
-                <span>sopra steria</span>
+          <div class="job">
+            <div class="exp-title">
+              <div class="tag">
+                <img src="icons/vscode-icons-main/icons/light/tag.svg" alt="" />
+                <div class="name">
+                  <span>sopra steria</span>
+                </div>
+              </div>
+              <div class="job-title">
+                <span class="job-position">Développeur</span>
+                <span class="job-date">Oct. 2015 - Févr. 2016</span>
+                <span class="job-location">Rennes</span>
               </div>
             </div>
-            <div class="job-title">
-              <span class="job-position">Développeur</span>
-              <span class="job-date">Oct. 2015 - Févr. 2016</span>
-              <span class="job-location">Rennes</span>
-            </div>
           </div>
-        </div>
-        <div class="job">
-          <div class="exp-title">
-            <div class="tag">
-              <img src="icons/vscode-icons-main/icons/light/tag.svg" alt="" />
-              <div class="name">
-                <span>télécom bretagne</span>
+          <div class="job">
+            <div class="exp-title">
+              <div class="tag">
+                <img src="icons/vscode-icons-main/icons/light/tag.svg" alt="" />
+                <div class="name">
+                  <span>télécom bretagne</span>
+                </div>
+              </div>
+              <div class="job-title">
+                <span class="job-position">Thésard</span>
+                <span class="job-date">Oct. 2011 - Oct. 2014</span>
+                <span class="job-location">Plouzané</span>
               </div>
             </div>
-            <div class="job-title">
-              <span class="job-position">Thésard</span>
-              <span class="job-date">Oct. 2011 - Oct. 2014</span>
-              <span class="job-location">Plouzané</span>
-            </div>
           </div>
-        </div>
-        <!-- <div class="job">
+          <!-- <div class="job">
           <div class="exp-title">
             <div class="tag">
               <img src="icons/vscode-icons-main/icons/light/tag.svg" alt="" />
@@ -591,6 +655,7 @@
             </div>
           </div>
         </div> -->
+        </div>
       </div>
     </div>
 
