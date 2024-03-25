@@ -40,7 +40,7 @@
       color: white;
       font-weight: bold;
       position: relative;
-      font-size: 16px;
+      font-size: 1.2em;
     }
 
     .window-controls {
@@ -57,7 +57,7 @@
       height: 25px;
       font-weight: bold;
       margin-left: 5px;
-      border-radius: 100%;      
+      border-radius: 100%;
     }
 
     .minimize,
@@ -76,9 +76,12 @@
     .content {
       display: flex;
       overflow: hidden;
+      height: 100%;
     }
 
+
     .sidebar {
+      padding-top: 40px;
       flex-shrink: 0;
       width: 55mm;
       background-color: #1B1B1C;
@@ -157,9 +160,6 @@
 
     .main-content {
       flex-grow: 1;
-      padding: 20px 20px 20px 0;
-      color: #C5C5C5;
-      text-align: justify;
     }
 
     .experience {
@@ -169,7 +169,7 @@
     .experience li:before {
       content: '•';
       margin-right: 5px;
-      color: #569cd6;
+      color: #007ACC;
     }
 
 
@@ -212,6 +212,9 @@
       list-style: none;
       padding-left: 0;
       position: relative;
+      padding: 5px 20px 20px 0;
+      color: #C5C5C5;
+      text-align: justify;
     }
 
     .timeline::before {
@@ -222,7 +225,7 @@
       left: 14px;
       /* Ajustement pour aligner avec le point central */
       width: 4px;
-      background: #569cd6;
+      background: #007ACC;
       /* Couleur de la ligne bleue */
     }
 
@@ -261,7 +264,7 @@
       width: 13px;
       height: 13px;
       border-radius: 50%;
-      background-color: #569cd6;
+      background-color: #007ACC;
       /* Couleur du point central */
       z-index: 2;
       /* Pour s'assurer que le point central soit au-dessus du cercle */
@@ -281,7 +284,7 @@
       align-content: center;
       align-items: center;
       border-radius: 5px;
-      background-color: #569cd6;
+      background-color: #007ACC;
       padding: 1px 1px 1px 5px;
     }
 
@@ -335,6 +338,47 @@
       flex-direction: row;
       gap: 5px;
     }
+
+    .tab-bar {
+      display: flex;
+      background-color: #1B1B1C;
+      height: 40px;
+    }
+
+    .tab {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #252526;
+      margin-right: 5px;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .tab > img {
+      height: 20px;
+      width: auto;
+      margin-right: 5px;
+    } 
+
+    .active {
+      border-top: solid 1px #007ACC;
+      color: white;
+    }
+
+    .tab-title {
+      margin-right: 10px;
+    }
+
+    .close-tab {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+    }
   </style>
 </head>
 
@@ -359,7 +403,6 @@
         <span class="margin-icon"><img src="icons/vscode-icons-main/icons/dark/smiley.svg" alt="" /></span>
       </div>
       <div class="sidebar">
-        <h2>Benoit ROUXEL</h2>
         <div class="section">
           <div class="section-title">
             <img src="icons/vscode-icons-main/icons/dark/chevron-down.svg" alt="" />
@@ -476,8 +519,13 @@
       </div>
 
       <div class="main-content">
-        <!-- La section principale du CV, comme l'expérience professionnelle, peut être ajoutée ici -->
-        <h1>Tech Lead</h1>
+        <div class="tab-bar">
+          <div class="tab active">
+            <img src="icons/icon_git.png" alt="">
+            <span class="tab-title">Expérience professionnelle</span>
+            <span class="close-tab">&times;</span>
+          </div>
+        </div>
 
         <div class="timeline">
 
@@ -507,7 +555,7 @@
             </ul>
             <div class="tech">
               <img src="icons/vscode-icons-main/icons/light/lightbulb.svg" alt="" />
-              <span>devops, architecture, user story, golang, LLM, react, opensearch</span>
+              <span>devops, architecture, user story, golang, LLM, react, notejs, opensearch, python</span>
             </div>
           </div>
 
