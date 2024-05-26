@@ -7,7 +7,7 @@
 </script>
 
 <div class="container">
-  <WindowBar title="Benoit ROUXEL - Tech Lead" />
+  <WindowBar title="Benoit ROUXEL - Lead Dev" />
 
   <div class="content">
     <nav>

@@ -33,7 +33,7 @@
         },
         {
             company: "geomod",
-            job: "Tech Lead",
+            job: "Lead Dev",
             date: "Janv. 2018 - Avr. 2022",
             location: "Brest",
             techList:
